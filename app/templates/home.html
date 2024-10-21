@@ -1,7 +1,12 @@
 
 {%extends 'base.html'%}
 {%block content%}
-
+<div>
+<h1>Login</h1>
+<form method = "POST" action = "{%url 'home'%}">
+    {% csrf_token %}
+</form>
+</div>
 
 <h1> Hello World</h1>
 
