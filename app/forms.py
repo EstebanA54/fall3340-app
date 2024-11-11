@@ -4,6 +4,6 @@ from django import forms
 
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField()
-    firstName = forms.CharField()
-    lastName = forms.CharField()
+    email = forms.EmailField(label = "Email", widget=forms.TextInput(attrs={'class':'form-control','placeholder':'something@domain.com'}))
+    firstName = forms.CharField(label = "First Name", widget=forms.TextInput(attrs={'class':'form-control','placeholder':'First Name'}))
+    lastName = forms.CharField(label = "Last Name", widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Last Name'}))
