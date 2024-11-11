@@ -20,5 +20,11 @@ def home(request):
 # def loginUser(request):
 #     pass
 
-# def logoutUser(request):
-#     pass
+def logoutUser(request):
+    logout(request)
+    messages.success(request,"Logged Out")
+    return redirect('home')
+    
+
+def registerUser(request):
+    return render(request, 'register.html', {})

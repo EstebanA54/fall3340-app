@@ -18,6 +18,16 @@
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
           </li>
+        
+        {% if user.is_authenticated%}
+        <li class="nav-item">
+          <a class = "nav-link" href ="{% url 'Logout'%}">Log Out</a>
+        </li>
+        {%else%}
+        <li class="nav-item">
+          <a class = "nav-link" href ="{% url 'Register'%}">New Account</a>
+        </li>
+        {%endif%}
         </ul>
       </div>
     </div>
